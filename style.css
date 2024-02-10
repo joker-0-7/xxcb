@@ -20,4 +20,6 @@
   height: 80px;
   background: #142849;
   color: skyblue;
+  display: flex;
+  align-items: center;
 }
