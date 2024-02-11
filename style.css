@@ -24,9 +24,8 @@
   align-items: center;
 }
 .content p {
+  border-bottom: 2px #3fae2b ;
       width: fit-content;
     margin: 10px auto;
     padding: 10px;
-    background: #3fae2b;
-    border-radius: 6px;
 }
