@@ -23,3 +23,10 @@
   display: flex;
   align-items: center;
 }
+.content p {
+      width: fit-content;
+    margin: 10px auto;
+    padding: 10px;
+    background: #3fae2b;
+    border-radius: 6px;
+}
