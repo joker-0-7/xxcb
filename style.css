@@ -24,8 +24,8 @@
   align-items: center;
 }
 .content p {
-  border-bottom: 2px #3fae2b ;
+  border-bottom: 4px #3fae2b solid ;
       width: fit-content;
     margin: 10px auto;
-    padding: 10px;
+    padding: 8px;
 }
