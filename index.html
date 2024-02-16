@@ -10,7 +10,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>star-oui</title>
   </head>
   <body>
     <div
@@ -18,7 +18,7 @@
       style="min-height: 100vh"
     >
       <div class="row mx-0">
-        <div class="col-lg-6 col-sm-12 mb-4 px-0">
+        <div class="col-lg-6 col-sm-12 mb-1 px-0">
           <div class="image">
             <img
               class="w-100"
@@ -42,55 +42,45 @@
                 </ul>
               </div>
             </div>
-            <div class="btns mb-3">
+            <div class="btns mb-1">
               <div class="row">
                 <div class="btn-gazy col-lg-4 col-sm-12">
                   <a
-                    href="https://bit.ly/3STkyvN"
-                    class="btn text-light w-75 rounded-5 fs-4 mt-3 fw-bold"
-                    style="
-                      background-image: linear-gradient(
-                        45deg,
-                        #fa6d01,
-                        #c80000
-                      );
-                    "
+                    href="##################"
+                    class="btn text-light w-75 rounded-5 fs-4 mt-2 fw-bold btn-success"
                     >زبائن جـازي اضغط هنا</a
                   >
                 </div>
                 <div class="btn-mobils col-lg-4 col-sm-12">
                   <a
-                    href="https://bit.ly/3STkyvN"
-                    class="btn text-light w-75 rounded-5 fs-4 mt-3 fw-bold"
-                    style="
-                      background-image: linear-gradient(
-                        45deg,
-                        #14f900,
-                        #1dcf01
-                      );
-                    "
+                    href="##################"
+                    class="btn text-light w-75 rounded-5 fs-4 mt-2 fw-bold btn-success"
                     >زبائن موبيلـيس اضغط هنا</a
                   >
                 </div>
                 <div class="btn-orido col-lg-4 col-sm-12">
                   <a
-                    href="https://bit.ly/3STkyvN"
-                    class="btn text-light w-75 rounded-5 fs-4 mt-3 fw-bold"
-                    style="
-                      background-image: linear-gradient(
-                        45deg,
-                        #fe0000,
-                        #fe0000
-                      );
-                    "
+                    href="##################"
+                    class="btn text-light w-75 rounded-5 fs-4 mt-2 fw-bold btn-success"
+                    >زبائن اوريـدو اضغط هنا</a
+                  >
+                </div>
+                <div class="btn-orido col-lg-4 col-sm-12">
+                  <a
+                    href="##################"
+                    class="btn text-light w-75 rounded-5 fs-4 mt-2 fw-bold btn-success"
                     >زبائن اوريـدو اضغط هنا</a
                   >
                 </div>
               </div>
             </div>
+            <div class="col-12 mt-3">
+              <div id="the-24h-countdown">
+                <p></p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="footer d-flex">
+          <!-- <div class="footer d-flex">
           <div class="col-4">
             <div class="num" id="calc">
               <h1>26095</h1>
@@ -109,12 +99,13 @@
           </div>
           <div class="col-4">
             <div class="num" id="winDay">
-              <h1>7356</h1>
+              <h1>7561</h1>
             </div>
             <div class="text">
               <span>الفائزين اليوم</span>
             </div>
           </div>
+        </div> -->
         </div>
       </div>
     </div>
@@ -129,19 +120,44 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      const winDay = document.querySelector("#winDay h1");
-      const calc = document.querySelector("#calc h1");
-      const winY = document.querySelector("#winY h1");
-      setInterval(() => {
-        winDay.innerHTML = +winDay.innerHTML + 1;
-        calc.innerHTML = +winDay.innerHTML + +winY.innerHTML;
-        if (winDay.innerHTML == 15764) {
-          winDay.innerHTML = 6582;
+      // let fNum = String(Date.now()).slice(4, 9);
+      // const winDay = document.querySelector("#winDay h1");
+      // const calc = document.querySelector("#calc h1");
+      // const winY = document.querySelector("#winY h1");
+      // let fNum = +winDay.innerHTML
+      // winDay.innerHTML = fNum;
+      // calc.innerHTML = +winDay.innerHTML + +winY.innerHTML;
+      // setInterval(() => {
+      //   winDay.innerHTML = String(Date.now()).slice(4, 9);
+      //   calc.innerHTML = +winDay.innerHTML + +winY.innerHTML;
+      //   if (fNum[0] == 0) {
+      //     fNum[0] = 1;
+      //   }
+      //   fNum++;
+      // }, 10000);
+      // setInterval(() => {
+      //   winY.innerHTML = String(Date.now()).slice(5, 10);
+      // }, 1000);
+      setInterval(function time() {
+        var d = new Date();
+        var hours = 24 - d.getHours();
+        var min = 60 - d.getMinutes();
+        if ((min + "").length == 1) {
+          min = "0" + min;
         }
-      }, 10000);
-      setInterval(() => {
-        winY.innerHTML = +winDay.innerHTML;
-      }, 1000 * 60 * 60 * 24);
+        var sec = 60 - d.getSeconds();
+        if ((sec + "").length == 1) {
+          sec = "0" + sec;
+        }
+        document.querySelector("#the-24h-countdown p").innerHTML =
+          '<span class="hours">' +
+          hours +
+          '</span><span class="min">' +
+          min +
+          '<br></span><span class="seg">' +
+          sec +
+          "</span>";
+      }, 1000);
     </script>
   </body>
 </html>
