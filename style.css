@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 #timer {
-  font-size: 3em;
-  font-weight: 100;
+  font-size: 2em;
+  font-weight: 600;
   color: white;
   text-shadow: 0 0 20px #48c8ff;
 
@@ -15,8 +15,8 @@
     span {
       color: #b1cdf1;
       display: block;
-      font-size: 0.35em;
-      font-weight: 300;
+      font-size: 0.55em;
+      font-weight: 600;
     }
   }
   p {
