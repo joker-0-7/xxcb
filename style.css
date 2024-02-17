@@ -3,29 +3,24 @@
   padding: 0;
   box-sizing: border-box;
 }
-#the-24h-countdown p span {
-  width: 50px;
-  height: 50px;
-  outline: 3px solid #eee;
-  display: inline-block;
-  line-height: 50px;
-  margin: 0 12px;
-  font-weight: bold;
-  font-size: 23px;
-}
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  height: 80px;
-  background: #C0C0C0;
-  color: #143A67;
-  display: flex;
-  align-items: center;
-}
-.content p {
-  border-bottom: 4px #3fae2b solid ;
-      width: fit-content;
-    margin: 10px auto;
-    padding: 8px;
+#timer {
+  font-size: 3em;
+  font-weight: 100;
+  color: white;
+  text-shadow: 0 0 20px #48c8ff;
+
+  div {
+    display: inline-block;
+    min-width: 20px;
+    span {
+      color: #b1cdf1;
+      display: block;
+      font-size: 0.35em;
+      font-weight: 300;
+    }
+  }
+  p {
+    display: inline;
+    width: 20px;
+  }
 }
