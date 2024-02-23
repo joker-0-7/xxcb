@@ -12,20 +12,32 @@ body,
   font-weight: 600;
   color: white;
   text-shadow: 0 0 20px #48c8ff;
-
-  div {
-    display: inline-block;
-    min-width: 20px;
-    span {
-      color: #b1cdf1;
-      display: block;
-      font-size: 0.55em;
-      font-weight: 600;
-    }
-  }
-  p {
-    display: inline;
-    width: 20px;
-  }
 }
 
+div {
+  display: inline-block;
+  min-width: 20px;
+}
+span {
+  color: #b1cdf1;
+  display: block;
+  font-size: 0.55em;
+  font-weight: 600;
+}
+p {
+  display: inline;
+  width: 20px;
+}
+.footer {
+  position: fixed;
+  flex-direction: column;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 90px;
+  color: skyblue;
+  background: rgb(2 108 72);
+}
+.footer .num {
+  display: block;
+}
