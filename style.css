@@ -1,17 +1,5 @@
 :root {
-  --gradient-shadow: linear-gradient(
-    45deg,
-    green,
-    #0000ff,
-    #00ff00,
-    #ffff00,
-    #ff0000,
-    #fb0094,
-    #0000ff,
-    #00ff00,
-    #ffff00,
-    #ff0000
-  );
+  --gradient-shadow: linear-gradient(45deg, green, #0000ff, #7f00ff);
 }
 * {
   margin: 0;
@@ -43,11 +31,6 @@ p {
   display: inline;
   width: 20px;
 }
-/* .footer .heading {
-  border: 3px solid rgb(2 108 72);
-  margin-bottom: -10px;
-  box-shadow: 5px 10px #48c8ff;
-} */
 .footer .row {
   position: fixed;
   flex-direction: column;
@@ -90,7 +73,7 @@ p {
   width: calc(100% + 4px);
   height: calc(100% + 4px);
   z-index: 1;
-  animation: animate 20s linear infinite;
+  animation: animate 15s linear infinite;
 }
 
 .footer .heading:after {
