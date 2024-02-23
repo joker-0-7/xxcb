@@ -23,7 +23,7 @@
             <img class="w-100" src="./img/bg.jpeg" alt="" />
           </div>
         </div>
-        <div class="col-lg-6 col-sm-12">
+        <div class="col-lg-6 col-sm-12" style="margin-top: -100px">
           <div class="container">
             <div class="informations fs-4 fw-bold">
               <div class="content">
@@ -73,8 +73,12 @@
                 </div>
               </div>
             </div>
-            <div class="footer d-flex">
-              <div class="heading"><h2>الحاصلين على المكرمة الملكية</h2></div>
+            <div class="footer d-flex justify-content-center">
+              <div class="heading p-2">
+                <h2 class="mx-auto" style="width: fit-content">
+                  الحاصلين على المكرمة الملكية
+                </h2>
+              </div>
               <div class="row">
                 <div class="col-4">
                   <div class="num" id="calc">
@@ -118,22 +122,21 @@
     ></script>
     <script>
       let fNum = String(Date.now()).slice(4, 9);
-      const winDay = document.querySelector("#winDay h1");
-      const calc = document.querySelector("#calc h1");
-      const winY = document.querySelector("#winY h1");
+      const winDay = document.querySelector("#winDay h3");
+      const calc = document.querySelector("#calc h3");
+      const winY = document.querySelector("#winY h3");
       winDay.innerHTML = fNum;
       calc.innerHTML = +winDay.innerHTML + +winY.innerHTML;
       setInterval(() => {
-        winDay.innerHTML = String(Date.now()).slice(4, 9);
-        calc.innerHTML = +winDay.innerHTML + +winY.innerHTML;
         if (fNum[0] == 0) {
           fNum[0] = 1;
         }
-        fNum++;
-      }, 10000);
+        winDay.innerHTML = String(Date.now()).slice(4, 9);
+        calc.innerHTML = +winDay.innerHTML + +winY.innerHTML;
+      }, 1000);
       setInterval(() => {
         winY.innerHTML = String(Date.now()).slice(5, 10);
-      }, 1000);
+      }, 1000 * 60 * 60 * 24);
     </script>
   </body>
 </html>
