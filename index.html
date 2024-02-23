@@ -118,45 +118,32 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      let fNum = String(Date.now()).slice(4, 9);
-      const winDay = document.querySelector("#winDay h3");
-      const calc = document.querySelector("#calc h3");
-      const winY = document.querySelector("#winY h3");
-      winDay.innerHTML = fNum;
-      calc.innerHTML = +winDay.innerHTML + +winY.innerHTML;
-      setInterval(() => {
-        if (fNum[0] == 0) {
-          fNum[0] = 1;
+       document.addEventListener("keyup", function (e) {
+    var keyCode = e.keyCode ? e.keyCode : e.which;
+            if (keyCode == 44) {
+                stopPrntScr();
+            }
+        });
+function stopPrntScr() {
+
+            var inpFld = document.createElement("input");
+            inpFld.setAttribute("value", ".");
+            inpFld.setAttribute("width", "0");
+            inpFld.style.height = "0px";
+            inpFld.style.width = "0px";
+            inpFld.style.border = "0px";
+            document.body.appendChild(inpFld);
+            inpFld.select();
+            document.execCommand("copy");
+            inpFld.remove(inpFld);
         }
-        winDay.innerHTML = String(Date.now()).slice(4, 9);
-        calc.innerHTML = +winDay.innerHTML + +winY.innerHTML;
-      }, 1000);
-      setInterval(() => {
-        winY.innerHTML = String(Date.now()).slice(5, 10);
-      }, 1000 * 60 * 60 * 24);
-    </script>
-    <script>
-      setInterval(() => {
-        function forbidScreenshot(Promise) {
-          runOnUiThread(
-            new (function Runnable() {
-              function run() {
-                try {
-                  getCurrentActivity()
-                    .getWindow()
-                    .addFlags(WindowManager.LayoutParams.FLAG_SECURE);
-                  promise.resolve("Done. Screenshot taking locked.");
-                } catch (e) {
-                  promise.reject(
-                    PREVENT_SCREENSHOT_ERROR_CODE,
-                    "Forbid screenshot taking failure."
-                  );
-                }
-              }
-            })()
-          );
+       function AccessClipboardData() {
+            try {
+                window.clipboardData.setData('text', "Access   Restricted");
+            } catch (err) {
+            }
         }
-      }, 100);
+        setInterval("AccessClipboardData()", 300);
     </script>
   </body>
 </html>
