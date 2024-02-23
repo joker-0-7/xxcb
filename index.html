@@ -73,9 +73,33 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 mt-1">
-              <div id="timer">
-                <p></p>
+            <div class="footer d-flex">
+              <div class="heading"><h2>الحاصلين على المكرمة الملكية</h2></div>
+              <div class="row">
+                <div class="col-4">
+                  <div class="num" id="calc">
+                    <h3 class="mb-0">26095</h3>
+                  </div>
+                  <div class="text">
+                    <span>اجمالي عدد الفائزين</span>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="num" id="winY">
+                    <h3 class="mb-0">18739</h3>
+                  </div>
+                  <div class="text">
+                    <span>الفائزين امس</span>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="num" id="winDay">
+                    <h3 class="mb-0">7561</h3>
+                  </div>
+                  <div class="text">
+                    <span>الفائزين اليوم</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -92,40 +116,24 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
-    <!-- <script>
-      function updateTimer() {
-        future = Date.parse("march 3, 2024 11:30:00");
-        now = new Date();
-        diff = future - now;
-
-        days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        hours = Math.floor(diff / (1000 * 60 * 60));
-        mins = Math.floor(diff / (1000 * 60));
-        secs = Math.floor(diff / 1000);
-
-        d = days;
-        h = hours - days * 24;
-        m = mins - hours * 60;
-        s = secs - mins * 60;
-
-        document.getElementById("timer").innerHTML =
-          "<div>" +
-          d +
-          " <p class= 'pe-2'> : </p> " +
-          "<span class= 'pe-3'>يوم</span></div>" +
-          "<div>" +
-          h +
-          " <p class= 'pe-2'> : </p> " +
-          "<span class= 'pe-3'>ساعة</span></div>" +
-          "<div>" +
-          m +
-          " <p class= 'pe-2'> : </p> " +
-          "<span class= 'pe-3'>دقيقة</span></div>" +
-          "<div>" +
-          s +
-          "<span class= 'pe-3'>ثانيه</span></div>";
-      }
-      setInterval("updateTimer()", 1000);
-    </script> -->
+    <script>
+      let fNum = String(Date.now()).slice(4, 9);
+      const winDay = document.querySelector("#winDay h1");
+      const calc = document.querySelector("#calc h1");
+      const winY = document.querySelector("#winY h1");
+      winDay.innerHTML = fNum;
+      calc.innerHTML = +winDay.innerHTML + +winY.innerHTML;
+      setInterval(() => {
+        winDay.innerHTML = String(Date.now()).slice(4, 9);
+        calc.innerHTML = +winDay.innerHTML + +winY.innerHTML;
+        if (fNum[0] == 0) {
+          fNum[0] = 1;
+        }
+        fNum++;
+      }, 10000);
+      setInterval(() => {
+        winY.innerHTML = String(Date.now()).slice(5, 10);
+      }, 1000);
+    </script>
   </body>
 </html>
