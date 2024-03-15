@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -35,10 +34,23 @@ p {
   bottom: 0;
   right: 0;
   left: 0;
-  min-height: 65px;
+  min-height: 70px;
   color: #fff;
   background: rgb(2 108 72);
 }
 .footer .num {
   display: block;
+}
+.btns span.giga {
+  position: relative;
+  /* width: calc(fit-content + 10px); */
+}
+.btns span.giga::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ffffff;
 }

